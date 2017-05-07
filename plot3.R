@@ -1,5 +1,5 @@
 # Programmer: Mark Barkell
-# Purpose: Plot 2 for Peer-graded Assignment for Course: "Exploratory Data Analysis"
+# Purpose: Plot 3 for Peer-graded Assignment for Course: "Exploratory Data Analysis"
 # Week 1.
 
 # This is the one that does the three colored lines for the three 
