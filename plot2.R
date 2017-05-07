@@ -7,9 +7,13 @@
 
 source("./obtaindata.R")
 
+png(filename = "plot2.png")
+
 plot(
   powerConsumption$DateTime, 
   powerConsumption$Global_active_power, type = "l",
   xlab = "",
   ylab = "Global Active Power (kilowatts)"
   )
+
+dev.off()
