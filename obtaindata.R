@@ -34,11 +34,17 @@ endDate <- as.Date("2007-02-02")
 # start date and end date.
 getPowerConsumption <- function () {
   powerConsumption <- read.table("household_power_consumption.txt", sep = ";", header = TRUE, stringsAsFactors = FALSE)
+  
+  orgDateString <- powerConsumption$Date
+  datetimeInfo <- strptime(paste(orgDateString, powerConsumption$Time), format = "%d/%m/%Y %H:%M:%S")
+  
+  
   powerConsumption$Global_active_power <- as.numeric(powerConsumption$Global_active_power)
   powerConsumption$Global_intensity <- as.numeric(powerConsumption$Global_intensity)
   powerConsumption$Voltage <- as.numeric(powerConsumption$Voltage)
   powerConsumption$Global_reactive_power <- as.numeric(powerConsumption$Global_reactive_power)
   powerConsumption$Date <- as.Date(strptime(powerConsumption$Date, "%d/%m/%Y", tz = "UTC"))
+  powerConsumption$DateTime <- datetimeInfo
   powerConsumption <- powerConsumption[powerConsumption$Date >= startDate & powerConsumption$Date <= endDate,]
   powerConsumption
 }

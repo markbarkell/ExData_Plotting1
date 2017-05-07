@@ -3,10 +3,11 @@ household_power_consumption.txt
 # Downloaded data File, compressed
 power_consumption.zip
 
+# Not all of my mistakes need to be know:
+.Rhistory
 
-# Don't store the output files, unless supposed to be stored for the assignment to be
-# scorable:
-plot1.png
-plot2.png
-plot3.png
-plot4.png
+# Realized that these file will likely need to be in the repository for grading purposes:
+# plot1.png
+# plot2.png
+# plot3.png
+# plot4.png
